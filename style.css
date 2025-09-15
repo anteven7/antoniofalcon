@@ -67,3 +67,41 @@ footer {
   text-decoration: underline;
   text-align: left;
 }
+/* ✅ Mobile styles */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* collapse grid into one column */
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  header {
+    font-size: 3rem;   /* scale down from 11rem */
+    text-align: center;
+  }
+
+  .image {
+    grid-column: 1 / -1; /* take full width */
+  }
+
+  .content {
+    grid-column: 1 / -1; /* full width */
+    font-size: 1rem;
+  }
+
+  .flex-column {
+    grid-column: 1 / -1; /* full width */
+    flex-direction: column;
+    align-items: flex-start; /* keep blocks aligned left */
+  }
+
+  .block {
+    font-size: 1rem; /* scale text down for mobile */
+  }
+
+  footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 0.75rem;
+  }
+}
